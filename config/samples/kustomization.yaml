@@ -1,0 +1,4 @@
+## Append samples of your project ##
+resources:
+- bgdeployment_v1alpha1_bgdeployment.yaml
+#+kubebuilder:scaffold:manifestskustomizesamples

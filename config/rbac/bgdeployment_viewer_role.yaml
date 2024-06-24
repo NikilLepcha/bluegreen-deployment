@@ -1,0 +1,27 @@
+# permissions for end users to view bgdeployments.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: bgdeployment-viewer-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: bluegreen-deployment
+    app.kubernetes.io/part-of: bluegreen-deployment
+    app.kubernetes.io/managed-by: kustomize
+  name: bgdeployment-viewer-role
+rules:
+- apiGroups:
+  - bgdeployment.example.com
+  resources:
+  - bgdeployments
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - bgdeployment.example.com
+  resources:
+  - bgdeployments/status
+  verbs:
+  - get

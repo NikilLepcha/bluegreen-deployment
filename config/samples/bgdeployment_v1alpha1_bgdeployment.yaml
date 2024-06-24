@@ -1,0 +1,12 @@
+apiVersion: bgdeployment.example.com/v1alpha1
+kind: BGDeployment
+metadata:
+  labels:
+    app.kubernetes.io/name: bgdeployment
+    app.kubernetes.io/instance: bgdeployment-sample
+    app.kubernetes.io/part-of: bluegreen-deployment
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: bluegreen-deployment
+  name: bgdeployment-sample
+spec:
+  # TODO(user): Add fields here
